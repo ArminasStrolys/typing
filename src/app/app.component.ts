@@ -15,4 +15,11 @@ export class AppComponent {
     const target = value.target as HTMLInputElement;
     this.message = target.value;
   };
+
+  compare(letter: string, index: string) {
+    if (!index) {
+      return 'none';
+    }
+    return letter === index ? 'correct' : 'incorrect';
+  }
 }
