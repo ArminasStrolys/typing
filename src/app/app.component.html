@@ -1,1 +1,9 @@
-<app-typing-card></app-typing-card>
+<div class="container">
+  <h1>Typing challenge</h1>
+  <p> {{randomText}} </p>
+  <input (input)="OnInput($event)" type="text">
+  <div>
+    <br>
+    <b *ngIf="randomText === message">You win!</b>
+  </div>
+</div>
